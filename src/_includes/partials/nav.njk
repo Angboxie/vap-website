@@ -1,0 +1,28 @@
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="/">
+      <img src="/assets/logo.svg" alt="{{ site.name }}" width="150" height="48">
+      <span class="brand__tagline">{{ site.tagline }}</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">
+      <span class="visually-hidden">Menu</span>
+      <svg width="24" height="24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"
+        stroke="currentColor" stroke-width="2" fill="none"/></svg>
+    </button>
+
+    <nav id="nav" class="nav" aria-label="Main">
+      <ul>
+        {% for item in site.nav %}
+        <li>
+          <a href="{{ item.url }}"
+             {% if page.url.startsWith(item.url) %}aria-current="page"{% endif %}>
+            {{ item.label }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

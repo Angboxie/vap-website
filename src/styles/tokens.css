@@ -1,0 +1,20 @@
+:root {
+  --brand-50:  #DEF4F7;
+  --brand-100: #B8E6EC;
+  --brand-500: #00A5B5;
+  --brand-700: #00707C;
+
+  --ink:       #323232;
+  --ink-muted: #5C5C5C;
+  --surface:   #FFFFFF;
+  --rule:      #B8E6EC;
+
+  --measure: 68ch;
+  --wrap: 1200px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  --step-0: 1rem;
+  --step-1: 1.25rem;
+  --step-2: clamp(1.5rem, 2.5vw, 2rem);
+  --step-3: clamp(2rem, 5vw, 3.25rem);
+}

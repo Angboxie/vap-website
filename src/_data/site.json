@@ -1,0 +1,19 @@
+{
+  "name": "Value Advisory Partners",
+  "legalName": "Value Advisory Partners Pty. Ltd.",
+  "tagline": "Creating Value, Delivering Impact",
+  "phone": "+61 3 7053 3009",
+  "phoneHref": "tel:+61370533009",
+  "email": "info@valueadvisory.co",
+  "address": {
+    "line1": "Level 11, 60 Albert Road",
+    "line2": "South Melbourne, Victoria, 3205, Australia"
+  },
+  "linkedin": "https://www.linkedin.com/company/value-advisory-partners/",
+  "nav": [
+    { "label": "What we do", "url": "/what-we-do/" },
+    { "label": "Our work", "url": "/our-work/" },
+    { "label": "Our team", "url": "/our-team/" },
+    { "label": "Get in touch", "url": "/get-in-touch/" }
+  ]
+}

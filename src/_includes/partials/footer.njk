@@ -1,0 +1,27 @@
+<footer class="site-foot">
+  <div class="wrap site-foot__inner">
+    <div>
+      <h2 class="site-foot__head">Connect with {{ site.name }}</h2>
+      <address>
+        {{ site.address.line1 }}<br>
+        {{ site.address.line2 }}<br><br>
+        <a href="{{ site.phoneHref }}">{{ site.phone }}</a><br>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </address>
+      <a class="site-foot__linkedin" href="{{ site.linkedin }}">LinkedIn</a>
+    </div>
+
+    <nav aria-label="Footer">
+      <ul class="site-foot__nav">
+        {% for item in site.nav %}
+        <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+
+  <div class="wrap site-foot__legal">
+    <p>&copy; {% year %} {{ site.legalName }} All rights reserved.
+       <a href="/copyright/">Copyright and terms</a></p>
+  </div>
+</footer>
