@@ -9,6 +9,8 @@
   --surface:   #FFFFFF;
   --rule:      #B8E6EC;
 
+  --font-sans: 'Inter', system-ui, sans-serif;
+
   --measure: 68ch;
   --wrap: 1200px;
   --gutter: clamp(1.25rem, 4vw, 3rem);
@@ -16,5 +18,5 @@
   --step-0: 1rem;
   --step-1: 1.25rem;
   --step-2: clamp(1.5rem, 2.5vw, 2rem);
-  --step-3: clamp(2rem, 5vw, 3.25rem);
+  --step-3: clamp(2.5rem, 7vw, 5rem);
 }
