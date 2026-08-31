@@ -1,0 +1,77 @@
+---
+layout: base.njk
+---
+<section class="case-hero">
+  <div class="case-hero__media" style="background-image: url('{{ image }}');"></div>
+  <div class="case-hero__overlay"></div>
+  <div class="wrap case-hero__inner">
+    <p class="eyebrow">Selected work</p>
+    <h1 class="case-hero__title">{{ title }}</h1>
+    {% if client %}<p class="case-hero__client">{{ client }}</p>{% endif %}
+  </div>
+</section>
+
+{% if lead %}
+<section class="case-lead">
+  <div class="wrap reveal">
+    <p class="case-lead__text">{{ lead }}</p>
+  </div>
+</section>
+{% endif %}
+
+<section class="case-meta">
+  <div class="wrap case-meta__panel reveal">
+    <div class="case-meta__grid">
+      {% if placeContext %}
+      <div class="case-meta__item">
+        <span class="case-meta__label">Place context</span>
+        <span class="case-meta__value">{{ placeContext }}</span>
+      </div>
+      {% endif %}
+      {% if projectType %}
+      <div class="case-meta__item">
+        <span class="case-meta__label">Project type</span>
+        <span class="case-meta__value">{{ projectType }}</span>
+      </div>
+      {% endif %}
+      {% if lifecycle %}
+      <div class="case-meta__item">
+        <span class="case-meta__label">Project lifecycle</span>
+        <span class="case-meta__value">{{ lifecycle }}</span>
+      </div>
+      {% endif %}
+      {% if scope %}
+      <div class="case-meta__item">
+        <span class="case-meta__label">Scope</span>
+        <span class="case-meta__value">{{ scope }}</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="case-body">
+  <div class="wrap case-body__inner reveal">
+    {{ content | safe }}
+  </div>
+</section>
+
+<section class="case-related">
+  <div class="wrap">
+    <p class="eyebrow">Continue exploring</p>
+    <div class="case-related__grid stagger">
+      {% for study in collections.caseStudies %}
+        {% if study.data.title != title %}
+        <a class="case-related__item reveal" href="{{ study.url }}">
+          <div class="case-related__media" style="background-image: url('{{ study.data.image }}');"></div>
+          <h3>{{ study.data.title }}</h3>
+          {% if study.data.client %}<p class="work__client">{{ study.data.client }}</p>{% endif %}
+          <span class="work__link">View case study <span aria-hidden="true">→</span></span>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <a class="section-cta" href="/our-work/">Back to selected work <span aria-hidden="true">→</span></a>
+  </div>
+</section>

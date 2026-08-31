@@ -1,0 +1,32 @@
+---
+layout: base.njk
+permalink: /our-work/
+title: Our work
+---
+<section class="work-list">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Our work</p>
+      <h1>Selected work</h1>
+      <p class="work-list__intro">A selection of recent work across resilience, precincts and infrastructure.</p>
+    </div>
+
+    <div class="work-rows" data-work-rows>
+      {% for study in collections.caseStudies %}
+      <a class="work-row reveal" href="{{ study.url }}" data-work-row data-image="{{ study.data.image }}">
+        <span class="work-row__title">{{ study.data.title }}</span>
+        <span class="work-row__meta">
+          {% if study.data.client %}<span class="work-row__meta-item">{{ study.data.client }}</span>{% endif %}
+          {% if study.data.placeContext %}<span class="work-row__meta-item">{{ study.data.placeContext }}</span>{% endif %}
+          {% if study.data.projectType %}<span class="work-row__meta-item">{{ study.data.projectType }}</span>{% endif %}
+        </span>
+        <span class="work-row__thumb" style="background-image: url('{{ study.data.image }}');" aria-hidden="true"></span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="work-list__preview" data-work-preview aria-hidden="true">
+    <div class="work-list__preview-image" data-work-preview-image></div>
+  </div>
+</section>
