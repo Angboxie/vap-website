@@ -1,0 +1,16 @@
+<section class="wd-framework">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Framework</p>
+      <h2>{{ block.name }}</h2>
+    </div>
+    <div class="wd-framework__body reveal">
+      {% if block.description %}
+      <p class="wd-framework__text">{{ block.description }}</p>
+      {% else %}
+      <p class="wd-framework__text wd-framework__text--placeholder">[Framework description to be supplied]</p>
+      {% endif %}
+    </div>
+    <div class="wd-framework__media reveal" data-placeholder="{{ block.imageCaption | default('Framework diagram to come') }}"></div>
+  </div>
+</section>

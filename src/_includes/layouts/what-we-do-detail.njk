@@ -1,0 +1,28 @@
+---
+layout: base.njk
+---
+{% for block in blocks %}
+  {% if block.type == "hero" %}
+    {% include "partials/wd-blocks/hero.njk" %}
+  {% elif block.type == "lead" %}
+    {% include "partials/wd-blocks/lead.njk" %}
+  {% elif block.type == "framework" %}
+    {% include "partials/wd-blocks/framework.njk" %}
+  {% elif block.type == "stats" %}
+    {% include "partials/wd-blocks/stats.njk" %}
+  {% elif block.type == "benefits" %}
+    {% include "partials/wd-blocks/benefits.njk" %}
+  {% elif block.type == "keyProject" %}
+    {% include "partials/wd-blocks/key-project.njk" %}
+  {% elif block.type == "publications" %}
+    {% include "partials/wd-blocks/publications.njk" %}
+  {% elif block.type == "clients" %}
+    {% include "partials/wd-blocks/clients.njk" %}
+  {% endif %}
+{% endfor %}
+
+<section class="wd-close">
+  <div class="wrap wd-close__inner">
+    <a class="section-cta" href="/what-we-do/">Back to what we do <span aria-hidden="true">→</span></a>
+  </div>
+</section>

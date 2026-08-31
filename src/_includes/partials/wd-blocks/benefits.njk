@@ -1,0 +1,16 @@
+<section class="wd-benefits">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Benefits</p>
+      <h2>{{ block.heading | default("Why it matters") }}</h2>
+    </div>
+    <ul class="wd-benefits__list stagger">
+      {% for item in block.items %}
+      <li class="wd-benefits__item reveal">
+        <span class="wd-benefits__figure">{{ item.figure }}</span>
+        <p class="wd-benefits__text">{{ item.text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

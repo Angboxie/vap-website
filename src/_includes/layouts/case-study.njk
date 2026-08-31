@@ -53,11 +53,42 @@ layout: base.njk
   </div>
 </section>
 
-<section class="case-body">
-  <div class="wrap case-body__inner reveal">
+{% if content and content | trim | length > 0 %}
+<section class="case-intro-image">
+  <div class="wrap reveal">
     {{ content | safe }}
   </div>
 </section>
+{% endif %}
+
+{% if sections %}
+<section class="case-body">
+  <div class="wrap reveal">
+    <div class="case-panels" data-case-panels>
+      <div class="case-panels__tabs" role="tablist" aria-label="Sections of this case study">
+        {% for section in sections %}
+        <button class="case-panels__tab{% if loop.first %} is-active{% endif %}" type="button" role="tab" aria-selected="{% if loop.first %}true{% else %}false{% endif %}" data-case-tab="{{ loop.index0 }}">
+          <span class="case-panels__tab-index">0{{ loop.index }}</span>
+          <span class="case-panels__tab-label">{{ section.heading }}</span>
+        </button>
+        {% endfor %}
+      </div>
+
+      <div class="case-panels__panels">
+        {% for section in sections %}
+        <div class="case-panels__panel{% if loop.first %} is-active{% endif %}" data-case-panel="{{ loop.index0 }}"{% if not loop.first %} hidden{% endif %}>
+          <h3>{{ section.heading }}</h3>
+          <p class="case-panels__body">{{ section.body }}</p>
+          {% if section.imageCaption %}
+          <div class="case-inline-image case-inline-image--inset" data-placeholder="Image: {{ section.imageCaption }}"></div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
 
 <section class="case-related">
   <div class="wrap">

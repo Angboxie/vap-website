@@ -1,0 +1,17 @@
+<section class="wd-stats">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">In numbers</p>
+      <h2>{{ block.heading | default("Key figures") }}</h2>
+    </div>
+    <ul class="wd-stats__list stagger">
+      {% for item in block.items %}
+      <li class="wd-stats__item reveal">
+        <span class="wd-stats__figure">{{ item.figure }}</span>
+        <span class="wd-stats__label">{{ item.label }}</span>
+        {% if item.source %}<span class="wd-stats__source">{{ item.source }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

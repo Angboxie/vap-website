@@ -1,0 +1,23 @@
+<section class="wd-clients">
+  <div class="wrap logos__inner reveal">
+    <div class="logos__head">
+      <h2>{{ block.heading | default("Who we've worked with") }}</h2>
+    </div>
+    <div class="logos__row">
+      <div class="logos__track">
+        {% for item in block.items %}
+        <div class="logos__logo" tabindex="0">
+          <img class="logos__mark" src="{{ item.logo }}" alt="" aria-hidden="true">
+          <span class="logos__name">{{ item.name }}</span>
+        </div>
+        {% endfor %}
+        {% for item in block.items %}
+        <div class="logos__logo" aria-hidden="true" tabindex="-1">
+          <img class="logos__mark" src="{{ item.logo }}" alt="" aria-hidden="true">
+          <span class="logos__name">{{ item.name }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

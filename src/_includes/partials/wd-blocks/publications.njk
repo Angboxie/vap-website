@@ -1,0 +1,22 @@
+<section class="wd-publications">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Publications</p>
+      <h2>{{ block.heading | default("Talks and publications") }}</h2>
+    </div>
+    <ul class="wd-publications__list">
+      {% for item in block.items %}
+      <li class="wd-publications__item reveal">
+        <span class="wd-publications__title">{{ item.title }}</span>
+        <span class="wd-publications__meta">
+          {%- if item.event %}{{ item.event }}{% endif -%}
+          {%- if item.event and item.date %} · {% endif -%}
+          {%- if item.date %}{{ item.date }}{% endif -%}
+        </span>
+        {% if item.presenters %}<span class="wd-publications__presenters">{{ item.presenters }}</span>{% endif %}
+        {% if item.url %}<a class="wd-publications__link" href="{{ item.url }}">View <span aria-hidden="true">→</span></a>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
