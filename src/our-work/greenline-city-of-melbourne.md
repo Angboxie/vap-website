@@ -10,10 +10,6 @@ image: /assets/img/greenline.JPG
 summary: Economic impact assessment and funding plan for the Greenline Implementation Plan, assessing benefits and constraints for local businesses, residents and visitors along the Yarra River corridor.
 order: 2
 ---
-### The brief
-
-Economic Impact Assessment on the Greenline Implementation Plan to assess economic opportunities, benefits as well as potential constraints that the Greenline once delivered will have on local businesses, the resident community and visitors.
-
 {% set caseImageCaption = "Yarra River corridor, Melbourne" %}
 {% include "partials/case-image-full.njk" %}
 

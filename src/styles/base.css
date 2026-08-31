@@ -1904,12 +1904,40 @@ img.logos__mark {
 .case-hero {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
   min-height: 60vh;
   margin-top: calc(-1 * var(--step-2));
-  padding-bottom: var(--step-3);
+  padding-block: var(--step-2) var(--step-3);
   color: var(--surface);
+}
+
+.case-hero__back-row {
+  position: relative;
+  z-index: 2;
+}
+
+.case-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--surface);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .case-hero__back {
+    transition: gap 0.2s ease, color 0.2s ease;
+  }
+}
+
+.case-hero__back:hover,
+.case-hero__back:focus-visible {
+  color: var(--brand-100);
+  gap: 0.75em;
 }
 
 .case-hero__media {
@@ -1956,14 +1984,15 @@ img.logos__mark {
 }
 
 .case-lead {
-  padding-top: var(--step-3);
+  padding-top: var(--step-2);
 }
 
 .case-lead__text {
-  font-size: var(--step-headline);
+  font-size: var(--step-2);
   font-weight: 500;
+  line-height: 1.4;
   color: var(--ink);
-  max-width: 22ch;
+  max-width: 48ch;
 }
 
 .case-meta {
