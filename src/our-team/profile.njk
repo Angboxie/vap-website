@@ -1,0 +1,85 @@
+---
+pagination:
+  data: team
+  size: 1
+  alias: member
+permalink: "/our-team/{{ member.slug }}/"
+eleventyComputed:
+  title: "{{ member.name }}"
+layout: base.njk
+---
+{% set total = pagination.hrefs.length %}
+{% set nextIndex = (pagination.pageNumber + 1) % total %}
+{% set prevIndex = (pagination.pageNumber - 1 + total) % total %}
+{% set nextMember = pagination.pages[nextIndex] %}
+{% set prevMember = pagination.pages[prevIndex] %}
+
+<section class="profile">
+  <div class="wrap profile__back-row reveal">
+    <a class="profile__back" href="/our-team/"><span aria-hidden="true">←</span> Our team</a>
+  </div>
+
+  <div class="wrap profile__grid reveal">
+    <div class="profile__portrait{% if not member.image %} profile__portrait--placeholder{% endif %}"{% if member.image %} style="background-image: url('{{ member.image }}');"{% else %} data-placeholder="Portrait to come"{% endif %}></div>
+    <div class="profile__info">
+      <p class="eyebrow">Our team</p>
+      <h1 class="profile__name">{{ member.name }}</h1>
+      {% if member.role %}<p class="profile__role">{{ member.role }}</p>{% endif %}
+      {% for para in member.bio %}
+      <p class="profile__bio">{{ para | safe }}</p>
+      {% endfor %}
+    </div>
+    <div class="profile__contact">
+      {% if member.phone %}
+      <div class="profile__contact-block">
+        <span class="profile__contact-label">Phone</span>
+        <a class="profile__contact-value" href="tel:{{ member.phone }}">{{ member.phone }}</a>
+      </div>
+      {% endif %}
+      {% if member.email %}
+      <div class="profile__contact-block">
+        <span class="profile__contact-label">Email</span>
+        <a class="profile__contact-value" href="mailto:{{ member.email }}">{{ member.email }}</a>
+      </div>
+      {% endif %}
+      {% if member.qualifications and member.qualifications.length %}
+      <div class="profile__contact-block">
+        <span class="profile__contact-label">Qualifications</span>
+        <ul class="profile__contact-list">
+          {% for q in member.qualifications %}<li>{{ q }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      {% if member.expertise and member.expertise.length %}
+      <div class="profile__contact-block">
+        <span class="profile__contact-label">Expertise</span>
+        <ul class="profile__contact-list">
+          {% for e in member.expertise %}<li>{{ e }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="wrap profile__queue reveal">
+    <a class="profile__queue-item profile__queue-item--prev" href="{{ prevMember.url }}">
+      <span class="profile__queue-label"><span aria-hidden="true">←</span> Previous</span>
+      <span class="profile__queue-name">{{ prevMember.name }}</span>
+    </a>
+    <a class="profile__queue-item profile__queue-item--next" href="{{ nextMember.url }}">
+      <span class="profile__queue-label">Next <span aria-hidden="true">→</span></span>
+      <span class="profile__queue-name">{{ nextMember.name }}</span>
+    </a>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta__inner reveal">
+    <div class="cta__text">
+      <h2>Connect with us</h2>
+      <p>Phone: {{ site.phone }}
+      Email: {{ site.email }}</p>
+    </div>
+    <a class="cta__link" href="/get-in-touch/">Get in touch <span aria-hidden="true">→</span></a>
+  </div>
+</section>

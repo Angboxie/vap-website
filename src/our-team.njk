@@ -1,0 +1,39 @@
+---
+layout: base.njk
+permalink: /our-team/
+title: Our team
+---
+<section class="team-intro">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Our team</p>
+      <h1>The people behind the work</h1>
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="wrap team__grid">
+    {% for member in team %}
+    <a class="team-member team-member--{{ loop.index }} reveal" href="{{ member.url }}">
+      <div class="team-member__portrait{% if not member.image %} team-member__portrait--placeholder{% endif %}"{% if member.image %} style="background-image: url('{{ member.image }}');"{% else %} data-placeholder="Portrait to come"{% endif %}></div>
+      <div class="team-member__info">
+        <h2 class="team-member__name">{{ member.name }}</h2>
+        {% if member.role %}<p class="team-member__role">{{ member.role }}</p>{% endif %}
+        <span class="team-member__link">View profile <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta__inner reveal">
+    <div class="cta__text">
+      <h2>Connect with us</h2>
+      <p>Phone: {{ site.phone }}
+      Email: {{ site.email }}</p>
+    </div>
+    <a class="cta__link" href="/get-in-touch/">Get in touch <span aria-hidden="true">→</span></a>
+  </div>
+</section>
