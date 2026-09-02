@@ -4,19 +4,74 @@
       <p class="eyebrow">Publications</p>
       <h2>{{ block.heading | default("Talks and publications") }}</h2>
     </div>
-    <ul class="wd-publications__list">
-      {% for item in block.items %}
-      <li class="wd-publications__item reveal">
-        <span class="wd-publications__title">{{ item.title }}</span>
-        <span class="wd-publications__meta">
-          {%- if item.event %}{{ item.event }}{% endif -%}
-          {%- if item.event and item.date %} · {% endif -%}
-          {%- if item.date %}{{ item.date }}{% endif -%}
-        </span>
-        {% if item.presenters %}<span class="wd-publications__presenters">{{ item.presenters }}</span>{% endif %}
-        {% if item.url %}<a class="wd-publications__link" href="{{ item.url }}">View <span aria-hidden="true">→</span></a>{% endif %}
-      </li>
-      {% endfor %}
-    </ul>
+
+    <div class="wd-pub-carousel reveal" data-carousel data-carousel-manual>
+      <div class="carousel__viewport">
+        <div class="carousel__track">
+          {% for item in block.items %}
+          <article class="carousel__slide wd-pub-slide{% if loop.first %} is-active{% endif %}" data-slide{% if not loop.first %} aria-hidden="true"{% endif %}>
+            <div class="wd-pub-slide__layout{% if item.links.presentationVideoId %} wd-pub-slide__layout--video{% endif %}">
+              <div class="wd-pub-slide__body">
+                <span class="wd-pub-slide__type">{% if item.type == "presentation" %}Presentation{% else %}Publication{% endif %}</span>
+                <h3 class="wd-pub-slide__title">{{ item.title }}</h3>
+
+                {% if item.type == "presentation" %}
+                <p class="wd-pub-slide__meta">
+                  {%- if item.event %}{{ item.event }}<br>{% endif -%}
+                  {%- if item.location %}{{ item.location }}<br>{% endif -%}
+                  {%- if item.date %}{{ item.date }}{% endif -%}
+                </p>
+                {% if item.focus and item.focus.length %}
+                <p class="wd-pub-slide__label">Presentation focus:</p>
+                <ul class="wd-pub-slide__list">
+                  {% for point in item.focus %}<li>{{ point }}</li>{% endfor %}
+                </ul>
+                {% endif %}
+                {% if item.presenters %}<p class="wd-pub-slide__by">Presented by {{ item.presenters }}</p>{% endif %}
+                {% else %}
+                <p class="wd-pub-slide__meta">
+                  {%- if item.authors %}<span class="wd-pub-slide__label">Authors:</span> {{ item.authors }}<br>{% endif -%}
+                  {%- if item.publisher %}Published by {{ item.publisher }}.<br>{% endif -%}
+                  {%- if item.date %}Publication date: {{ item.date }}{% endif -%}
+                </p>
+                {% endif %}
+
+                {% if item.links and (item.links.presentation or item.links.download) %}
+                <div class="wd-pub-slide__actions">
+                  {% if item.links.presentation %}<a class="wd-framework__link" href="{{ item.links.presentation }}">View presentation <span aria-hidden="true">→</span></a>{% endif %}
+                  {% if item.links.download %}<a class="wd-framework__link" href="{{ item.links.download }}">Download a copy <span aria-hidden="true">→</span></a>{% endif %}
+                </div>
+                {% endif %}
+              </div>
+
+              {% if item.links.presentationVideoId %}
+              <div class="wd-pub-slide__video">
+                <button class="wd-pub-video" type="button" data-yt-preview="{{ item.links.presentationVideoId }}" aria-label="Play video: {{ item.title }}">
+                  <img class="wd-pub-video__thumb" src="https://img.youtube.com/vi/{{ item.links.presentationVideoId }}/hqdefault.jpg" alt="" loading="lazy">
+                  <span class="wd-pub-video__play" aria-hidden="true">▶</span>
+                </button>
+              </div>
+              {% endif %}
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+        <div class="visually-hidden" aria-live="polite" data-carousel-announcer></div>
+      </div>
+
+      {% if block.items.length > 1 %}
+      <button class="wd-pub-arrow wd-pub-arrow--prev" type="button" data-carousel-prev aria-label="Previous publication">
+        <span aria-hidden="true">←</span>
+      </button>
+      <button class="wd-pub-arrow wd-pub-arrow--next" type="button" data-carousel-next aria-label="Next publication">
+        <span aria-hidden="true">→</span>
+      </button>
+      <div class="carousel__progress wd-pub-dots" role="tablist" aria-label="Publications navigation">
+        {% for item in block.items %}
+        <button class="carousel__segment wd-pub-dot{% if loop.first %} is-active{% endif %}" type="button" role="tab" aria-label="Show publication {{ loop.index }}: {{ item.title }}" aria-selected="{% if loop.first %}true{% else %}false{% endif %}"></button>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
   </div>
 </section>

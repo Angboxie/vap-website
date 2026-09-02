@@ -16,9 +16,9 @@
       "label": "What we do",
       "url": "/what-we-do/",
       "children": [
-        { "label": "Resilience and disaster risk reduction", "url": "/what-we-do/resilience/" },
-        { "label": "Precincts, planning and development", "url": "/what-we-do/precincts/" },
-        { "label": "Infrastructure, amenity and land use", "url": "/what-we-do/infrastructure/" }
+        { "label": "Resilience and Disaster Risk Reduction", "url": "/what-we-do/resilience/" },
+        { "label": "Precincts, Planning and Development", "url": "/what-we-do/precincts/" },
+        { "label": "Infrastructure, Amenity and Land Use", "url": "/what-we-do/infrastructure/" }
       ]
     },
     { "label": "Our work", "url": "/our-work/" },

@@ -74,8 +74,10 @@
     function goNext() { go(current + 1); }
     function goPrev() { go(current - 1); }
 
+    var autoplay = !reduceMotion && !root.hasAttribute('data-carousel-manual');
+
     function startAuto() {
-      if (reduceMotion) return;
+      if (!autoplay) return;
       stopAuto();
       timer = window.setInterval(goNext, AUTO_MS);
     }
@@ -93,6 +95,11 @@
         startAuto();
       });
     });
+
+    var prevBtn = root.querySelector('[data-carousel-prev]');
+    var nextBtn = root.querySelector('[data-carousel-next]');
+    if (prevBtn) prevBtn.addEventListener('click', function () { goPrev(); startAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { goNext(); startAuto(); });
 
     function freezeFills() {
       segments.forEach(function (seg) {
