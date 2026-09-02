@@ -10,8 +10,17 @@
     "line2": "South Melbourne, Victoria, 3205, Australia"
   },
   "linkedin": "https://www.linkedin.com/company/value-advisory-partners/",
+  "formEndpoint": "https://formspree.io/f/REPLACE_WITH_FORM_ID",
   "nav": [
-    { "label": "What we do", "url": "/what-we-do/" },
+    {
+      "label": "What we do",
+      "url": "/what-we-do/",
+      "children": [
+        { "label": "Resilience and disaster risk reduction", "url": "/what-we-do/resilience/" },
+        { "label": "Precincts, planning and development", "url": "/what-we-do/precincts/" },
+        { "label": "Infrastructure, amenity and land use", "url": "/what-we-do/infrastructure/" }
+      ]
+    },
     { "label": "Our work", "url": "/our-work/" },
     { "label": "Our team", "url": "/our-team/" },
     { "label": "Get in touch", "url": "/get-in-touch/" }

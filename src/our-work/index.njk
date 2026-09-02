@@ -20,7 +20,7 @@ title: Our work
           {% if study.data.placeContext %}<span class="work-row__meta-item">{{ study.data.placeContext }}</span>{% endif %}
           {% if study.data.projectType %}<span class="work-row__meta-item">{{ study.data.projectType }}</span>{% endif %}
         </span>
-        <span class="work-row__thumb" style="background-image: url('{{ study.data.image }}');" aria-hidden="true"></span>
+        <span class="work-row__thumb"{% if study.data.image %} style="background-image: url('{{ study.data.image }}');"{% else %} data-placeholder="Image to come"{% endif %} aria-hidden="true"></span>
       </a>
       {% endfor %}
     </div>

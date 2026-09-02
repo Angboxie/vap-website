@@ -1,0 +1,83 @@
+---
+layout: base.njk
+permalink: /get-in-touch/
+title: Get in touch
+---
+<section class="contact-lead">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Get in touch</p>
+      <h1>Let's talk about your next project.</h1>
+      <p class="contact-lead__text">Tell us a little about what you're working on and we'll get back to you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-main">
+  <div class="wrap contact-main__grid reveal">
+    <!--
+      This site is statically hosted and has no backend to process form
+      submissions. The action attribute below points at site.formEndpoint
+      in src/_data/site.json, currently a placeholder. Replace it with a
+      real Formspree endpoint (https://formspree.io/f/<form-id>), or any
+      other form-handling service, before this form goes live.
+    -->
+    <form class="contact-form" data-contact-form action="{{ site.formEndpoint }}" method="POST" novalidate>
+      <div class="form-status" data-form-status role="alert" hidden></div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="firstName">First name</label>
+          <input type="text" id="firstName" name="firstName" autocomplete="given-name" required aria-describedby="firstName-error">
+          <span class="form-error" id="firstName-error" hidden></span>
+        </div>
+        <div class="form-field">
+          <label for="lastName">Last name</label>
+          <input type="text" id="lastName" name="lastName" autocomplete="family-name" required aria-describedby="lastName-error">
+          <span class="form-error" id="lastName-error" hidden></span>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+        <span class="form-error" id="email-error" hidden></span>
+      </div>
+
+      <div class="form-field">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" autocomplete="organization" required aria-describedby="company-error">
+        <span class="form-error" id="company-error" hidden></span>
+      </div>
+
+      <div class="form-field">
+        <label for="message">Additional information <span class="form-optional">(optional)</span></label>
+        <textarea id="message" name="message" rows="5" autocomplete="off"></textarea>
+      </div>
+
+      <button class="form-submit" type="submit" data-form-submit>Send message</button>
+    </form>
+
+    <aside class="contact-details">
+      <div class="contact-details__block">
+        <p class="eyebrow">Contact details</p>
+        <address class="contact-details__address">
+          {{ site.address.line1 }}<br>
+          {{ site.address.line2 }}
+        </address>
+        <ul class="contact-details__list">
+          <li><a href="{{ site.phoneHref }}">{{ site.phone }}</a></li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="{{ site.linkedin }}">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="contact-details__map">
+        <iframe
+          src="https://www.google.com/maps?q={{ (site.address.line1 + ', ' + site.address.line2) | urlencode }}&output=embed"
+          title="Map showing Value Advisory Partners' office at {{ site.address.line1 }}, {{ site.address.line2 }}"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </aside>
+  </div>
+</section>

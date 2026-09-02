@@ -27,7 +27,14 @@
   function show(row) {
     if (current !== row) {
       current = row;
-      previewImage.style.backgroundImage = "url('" + row.getAttribute('data-image') + "')";
+      var image = row.getAttribute('data-image');
+      if (image) {
+        previewImage.style.backgroundImage = "url('" + image + "')";
+        previewImage.removeAttribute('data-placeholder');
+      } else {
+        previewImage.style.backgroundImage = 'none';
+        previewImage.setAttribute('data-placeholder', 'Image to come');
+      }
     }
     preview.classList.add('is-visible');
   }

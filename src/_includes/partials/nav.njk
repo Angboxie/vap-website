@@ -1,6 +1,6 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
-  <div class="wrap site-head__inner">
+  <div class="site-head__inner">
     <a class="brand" href="/">
       <svg class="brand__mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
         <circle cx="14" cy="13" r="10" fill="var(--brand-100)" />
@@ -22,11 +22,21 @@
     <nav id="nav" class="nav" aria-label="Main">
       <ul>
         {% for item in site.nav %}
-        <li>
+        <li class="nav__item{% if item.children %} nav__item--has-children{% endif %}">
           <a href="{{ item.url }}"
              {% if page.url.startsWith(item.url) %}aria-current="page"{% endif %}>
             {{ item.label }}
+            {% if item.children %}<span class="nav__caret" aria-hidden="true"></span>{% endif %}
           </a>
+          {% if item.children %}
+          <ul class="nav__submenu">
+            {% for child in item.children %}
+            <li>
+              <a href="{{ child.url }}" {% if page.url == child.url %}aria-current="page"{% endif %}>{{ child.label }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>

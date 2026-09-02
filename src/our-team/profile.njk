@@ -21,7 +21,8 @@ layout: base.njk
 
   <div class="wrap profile__grid reveal">
     <div class="profile__portrait{% if not member.image %} profile__portrait--placeholder{% endif %}"{% if member.image %} style="background-image: url('{{ member.image }}');"{% else %} data-placeholder="Portrait to come"{% endif %}></div>
-    <div class="profile__info">
+
+    <div class="profile__main">
       <p class="eyebrow">Our team</p>
       <h1 class="profile__name">{{ member.name }}</h1>
       {% if member.role %}<p class="profile__role">{{ member.role }}</p>{% endif %}
@@ -29,6 +30,7 @@ layout: base.njk
       <p class="profile__bio">{{ para | safe }}</p>
       {% endfor %}
     </div>
+
     <div class="profile__contact">
       {% if member.phone %}
       <div class="profile__contact-block">

@@ -13,31 +13,10 @@ layout: base.njk
     </h1>
     <span class="hero__mask">
       <span class="hero__line hero__actions">
-        <a class="hero__cta hero__cta--primary" href="/our-work/">See our work</a>
+        <a class="hero__cta hero__cta--primary" href="/what-we-do/">See what we do</a>
         <a class="hero__cta hero__cta--secondary" href="/get-in-touch/">Get in touch <span aria-hidden="true">→</span></a>
       </span>
     </span>
-  </div>
-
-  <div class="wrap hero__stats">
-    <ul class="stats__list">
-      <li class="stats__item">
-        <span class="stats__number">[Stat number 1]</span>
-        <span class="stats__label">[Stat label 1]</span>
-      </li>
-      <li class="stats__item">
-        <span class="stats__number">[Stat number 2]</span>
-        <span class="stats__label">[Stat label 2]</span>
-      </li>
-      <li class="stats__item">
-        <span class="stats__number">[Stat number 3]</span>
-        <span class="stats__label">[Stat label 3]</span>
-      </li>
-      <li class="stats__item">
-        <span class="stats__number">[Stat number 4]</span>
-        <span class="stats__label">[Stat label 4]</span>
-      </li>
-    </ul>
   </div>
 </section>
 
@@ -74,7 +53,7 @@ layout: base.njk
           <p class="focus__eyebrow">Focus area</p>
           <h3 class="focus__title">Resilience and disaster risk reduction</h3>
           <p class="focus__text">With CSIRO, developed the Enabling Resilience Investment Framework, an assessment and decision-making toolkit for reducing climate and disaster risk.</p>
-          <a class="focus__more" href="/what-we-do/">Learn more <span aria-hidden="true">→</span></a>
+          <a class="focus__more" href="/what-we-do/resilience/">Learn more <span aria-hidden="true">→</span></a>
         </div>
       </div>
 
@@ -85,7 +64,7 @@ layout: base.njk
           <p class="focus__eyebrow">Focus area</p>
           <h3 class="focus__title">Precincts, planning and development</h3>
           <p class="focus__text">Success depends on an evidence base integrating top-down and bottom-up analysis, real data and forecasts.</p>
-          <a class="focus__more" href="/what-we-do/">Learn more <span aria-hidden="true">→</span></a>
+          <a class="focus__more" href="/what-we-do/precincts/">Learn more <span aria-hidden="true">→</span></a>
         </div>
       </div>
 
@@ -96,9 +75,103 @@ layout: base.njk
           <p class="focus__eyebrow">Focus area</p>
           <h3 class="focus__title">Infrastructure, amenity and land use</h3>
           <p class="focus__text">A system helping governments, agencies, universities and developers integrate transport, land use and delivery models.</p>
-          <a class="focus__more" href="/what-we-do/">Learn more <span aria-hidden="true">→</span></a>
+          <a class="focus__more" href="/what-we-do/infrastructure/">Learn more <span aria-hidden="true">→</span></a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="trusted">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Where we work</p>
+      <h2>Trusted across resilience, precincts and infrastructure</h2>
+      <p class="trusted__intro">Project experience across resilience, precincts and infrastructure, throughout Australia and New Zealand.</p>
+    </div>
+
+    <div class="trusted__legend">
+      <span class="trusted__legend-item"><span class="trusted__legend-swatch" data-area="resilience" aria-hidden="true"></span>Resilience</span>
+      <span class="trusted__legend-item"><span class="trusted__legend-swatch" data-area="precincts" aria-hidden="true"></span>Precincts</span>
+      <span class="trusted__legend-item"><span class="trusted__legend-swatch" data-area="infrastructure" aria-hidden="true"></span>Infrastructure</span>
+    </div>
+
+    <div class="trusted__map-panel reveal">
+      <div class="trusted__map-embed" data-project-map>
+        <iframe
+          src="https://www.google.com/maps?ll=-29,150&z=4&output=embed"
+          title="Map of Australia and New Zealand"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          tabindex="-1"></iframe>
+        <div class="trusted__map-block" aria-hidden="true"></div>
+        <p class="trusted__map-cover" aria-hidden="true">Australia and New Zealand</p>
+
+        {% for region in projectMap.regions %}
+        <div class="trusted__map-marker" style="left: {{ region.x }}%; top: {{ region.y }}%;">
+          <button class="trusted__pin" type="button" data-map-pin aria-expanded="false" aria-controls="pin-panel-{{ region.id }}">
+            <span class="visually-hidden">{{ region.label }}, </span>{{ region.projects.length }}
+          </button>
+          <div class="trusted__pin-panel" id="pin-panel-{{ region.id }}" data-map-panel hidden>
+            <h3>{{ region.label }}</h3>
+            <ul>
+              {% for project in region.projects %}
+              <li>
+                <span class="trusted__pin-project">{{ project.name }}</span>
+                <span class="trusted__pin-tags">
+                  {% for area in project.areas %}<span class="trusted__pin-tag" data-area="{{ area | lower }}">{{ area }}</span>{% endfor %}
+                </span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endfor %}
+
+        <div class="trusted__map-marker trusted__map-marker--national" style="left: 61%; top: 19%;">
+          <button class="trusted__pin trusted__pin--national" type="button" data-map-pin aria-expanded="false" aria-controls="pin-panel-national">
+            <span class="visually-hidden">National projects, </span>{{ projectMap.nationalProjects.length }}
+          </button>
+          <div class="trusted__pin-panel trusted__pin-panel--national" id="pin-panel-national" data-map-panel hidden>
+            <h3>National projects</h3>
+            <ul>
+              {% for project in projectMap.nationalProjects %}
+              <li>
+                <span class="trusted__pin-project">{{ project.name }}</span>
+                <span class="trusted__pin-tags">
+                  {% for area in project.areas %}<span class="trusted__pin-tag" data-area="{{ area | lower }}">{{ area }}</span>{% endfor %}
+                </span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trusted__areas stagger">
+      {% set areaCards = [
+        { area: "resilience", href: "/what-we-do/resilience/", label: "Resilience and disaster risk reduction", clients: areaClients.resilience },
+        { area: "precincts", href: "/what-we-do/precincts/", label: "Precincts, planning and development", clients: areaClients.precincts },
+        { area: "infrastructure", href: "/what-we-do/infrastructure/", label: "Infrastructure, amenity and land use", clients: areaClients.infrastructure }
+      ] %}
+      {% for card in areaCards %}
+      <a class="trusted__area trusted__area--list reveal" data-area="{{ card.area }}" href="{{ card.href }}">
+        <span class="trusted__area-label">{{ card.label }}</span>
+        <span class="trusted__area-clients" data-client-rotator aria-live="polite">
+          {% for client in card.clients %}
+          <span class="trusted__area-client{% if loop.first %} is-active{% endif %}">
+            {% if client.logo %}
+            <img class="trusted__area-client-logo" src="{{ client.logo }}" alt="">
+            {% else %}
+            <span class="trusted__area-client-mark" aria-hidden="true">{{ client.name[0] }}</span>
+            {% endif %}
+            <span class="trusted__area-client-name">{{ client.name }}</span>
+          </span>
+          {% endfor %}
+        </span>
+      </a>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -203,23 +276,34 @@ layout: base.njk
       </div>
     </div>
     <div class="values__right">
-      <div class="values__image reveal" data-placeholder="Image to come"></div>
       <div class="values__list stagger">
         <div class="values__item reveal">
-          <span class="values__num" aria-hidden="true">01</span>
-          <p>Creating and maintaining ongoing relationships built on trust</p>
+          <div class="values__item-image" data-placeholder="Image to come"></div>
+          <div class="values__item-body">
+            <span class="values__num" aria-hidden="true">01</span>
+            <p>Creating and maintaining ongoing relationships built on trust</p>
+          </div>
         </div>
         <div class="values__item reveal">
-          <span class="values__num" aria-hidden="true">02</span>
-          <p>Empowering clients to find new solutions they hadn't considered</p>
+          <div class="values__item-image" data-placeholder="Image to come"></div>
+          <div class="values__item-body">
+            <span class="values__num" aria-hidden="true">02</span>
+            <p>Empowering clients to find new solutions they hadn't considered</p>
+          </div>
         </div>
         <div class="values__item reveal">
-          <span class="values__num" aria-hidden="true">03</span>
-          <p>Designing innovative solutions</p>
+          <div class="values__item-image" data-placeholder="Image to come"></div>
+          <div class="values__item-body">
+            <span class="values__num" aria-hidden="true">03</span>
+            <p>Designing innovative solutions</p>
+          </div>
         </div>
         <div class="values__item reveal">
-          <span class="values__num" aria-hidden="true">04</span>
-          <p>Enhancing benefits to the community and society</p>
+          <div class="values__item-image" data-placeholder="Image to come"></div>
+          <div class="values__item-body">
+            <span class="values__num" aria-hidden="true">04</span>
+            <p>Enhancing benefits to the community and society</p>
+          </div>
         </div>
       </div>
     </div>

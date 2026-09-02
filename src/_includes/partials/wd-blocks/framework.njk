@@ -10,7 +10,16 @@
       {% else %}
       <p class="wd-framework__text wd-framework__text--placeholder">[Framework description to be supplied]</p>
       {% endif %}
+      {% if block.links and block.links.length %}
+      <div class="wd-framework__links">
+        {% for link in block.links %}
+        <a class="wd-framework__link" href="{{ link.url }}">{{ link.label }} <span aria-hidden="true">→</span></a>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
-    <div class="wd-framework__media reveal" data-placeholder="{{ block.imageCaption | default('Framework diagram to come') }}"></div>
+    {% if block.imageCaption %}
+    <div class="wd-framework__media reveal" data-placeholder="{{ block.imageCaption }}"></div>
+    {% endif %}
   </div>
 </section>

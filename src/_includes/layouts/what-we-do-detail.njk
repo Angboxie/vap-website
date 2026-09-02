@@ -8,6 +8,8 @@ layout: base.njk
     {% include "partials/wd-blocks/lead.njk" %}
   {% elif block.type == "framework" %}
     {% include "partials/wd-blocks/framework.njk" %}
+  {% elif block.type == "feature" %}
+    {% include "partials/wd-blocks/feature.njk" %}
   {% elif block.type == "stats" %}
     {% include "partials/wd-blocks/stats.njk" %}
   {% elif block.type == "benefits" %}

@@ -1,21 +1,25 @@
 <section class="wd-key-project">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">Key project</p>
+      <p class="eyebrow">{% if block.slugs.length > 1 %}Key projects{% else %}Key project{% endif %}</p>
       <h2>Seeing it in practice</h2>
     </div>
-    {% for study in collections.caseStudies %}
-      {% if study.fileSlug == block.slug %}
-      <a class="wd-key-project__card reveal" href="{{ study.url }}">
-        <div class="wd-key-project__media" style="background-image: url('{{ study.data.image }}');"></div>
-        <div class="wd-key-project__body">
-          {% if study.data.client %}<p class="wd-key-project__client">{{ study.data.client }}</p>{% endif %}
-          <h3 class="wd-key-project__title">{{ study.data.title }}</h3>
-          <p class="wd-key-project__summary">{{ study.data.summary }}</p>
-          <span class="work__link">View case study <span aria-hidden="true">→</span></span>
-        </div>
-      </a>
-      {% endif %}
-    {% endfor %}
+    <div class="wd-key-project__list{% if block.slugs.length > 1 %} wd-key-project__list--grid{% endif %}">
+      {% for slug in block.slugs %}
+        {% for study in collections.caseStudies %}
+          {% if study.fileSlug == slug %}
+          <a class="wd-key-project__card reveal" href="{{ study.url }}">
+            <div class="wd-key-project__media"{% if study.data.image %} style="background-image: url('{{ study.data.image }}');"{% else %} data-placeholder="Image to come"{% endif %}></div>
+            <div class="wd-key-project__body">
+              {% if study.data.client %}<p class="wd-key-project__client">{{ study.data.client }}</p>{% endif %}
+              <h3 class="wd-key-project__title">{{ study.data.title }}</h3>
+              <p class="wd-key-project__summary">{{ study.data.summary }}</p>
+              <span class="work__link">View case study <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </section>

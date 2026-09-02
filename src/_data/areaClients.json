@@ -1,0 +1,32 @@
+{
+  "resilience": [
+    { "name": "CSIRO", "logo": "/assets/img/csiro-logo.webp" },
+    { "name": "National Emergency Management Agency", "logo": "/assets/img/nemalogo.png" },
+    { "name": "Department for Environment and Water, Government of South Australia", "logo": "/assets/img/sadfeawlogo.png" },
+    { "name": "Port Adelaide Enfield", "logo": "/assets/img/paelogo.png" },
+    { "name": "NSW Department of Planning, Housing and Infrastructure", "logo": "/assets/img/nswdophailogo.png" },
+    { "name": "Bega Valley Shire Council", "logo": "/assets/img/bvsclogo.jpg" },
+    { "name": "CDMPS", "logo": "/assets/img/cdmpslogo.jpg" }
+  ],
+  "precincts": [
+    { "name": "Victoria State Government, Department of Transport and Planning", "logo": "/assets/img/vt-logo.webp" },
+    { "name": "Deakin University", "logo": "/assets/img/deakinlogo.webp" },
+    { "name": "Harbour Trust", "logo": "/assets/img/htlogo.png" },
+    { "name": "City of Port Phillip", "logo": "/assets/img/copplogo.webp" },
+    { "name": "Adelaide Showground", "logo": "/assets/img/adelaideshowgroundlogo.jpg" },
+    { "name": "Maribyrnong City Council", "logo": "/assets/img/maribyrnonglogo.webp" },
+    { "name": "Sovereign Hill", "logo": "/assets/img/sovhilllogo.webp" },
+    { "name": "Vicinity Centres", "logo": "/assets/img/vicinitycentreslogo.png" },
+    { "name": "City of Melbourne", "logo": "/assets/img/comlogo.png" },
+    { "name": "Liverpool City Council", "logo": "/assets/img/liverpoollogo.jpg" },
+    { "name": "Port Adelaide Enfield", "logo": "/assets/img/paelogo.png" },
+    { "name": "Wyndham City Council", "logo": "/assets/img/wyndhamcitylogo.webp" }
+  ],
+  "infrastructure": [
+    { "name": "Victorian Health Building Authority", "logo": "/assets/img/vhba-logo.png" },
+    { "name": "Perth Airport", "logo": "/assets/img/paplogo.png" },
+    { "name": "Peri Urban Councils Victoria", "logo": "/assets/img/pucvlogo.webp" },
+    { "name": "Australian Government Department of Infrastructure, Transport, Regional Development and Communications", "logo": "/assets/img/doitrdaclogo.png" },
+    { "name": "Development Victoria", "logo": "/assets/img/developmentviclogo.png" }
+  ]
+}

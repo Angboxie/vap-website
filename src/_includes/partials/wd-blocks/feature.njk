@@ -1,0 +1,59 @@
+<section class="wd-feature">
+  <div class="wrap wd-feature__grid">
+    <div class="wd-feature__text reveal">
+      <p class="eyebrow">{{ block.eyebrow | default("Overview") }}</p>
+      <h2>{{ block.heading }}</h2>
+      {% for para in block.body %}
+      <p class="wd-feature__body">{{ para }}</p>
+      {% endfor %}
+      {% if block.bullets and block.bullets.length %}
+      <ul class="wd-feature__bullets">
+        {% for item in block.bullets %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+      {% if block.closing %}
+      <p class="wd-feature__body">{{ block.closing }}</p>
+      {% endif %}
+    </div>
+
+    {% if block.visual %}
+    <div class="wd-feature__visual">
+      {% if block.visual.kind == "hexagon" %}
+      <div class="wd-hexagon reveal">
+        <div class="wd-hexagon__shape">
+          <span>{{ block.visual.title }}</span>
+        </div>
+        {% if block.visual.tagline %}<p class="wd-hexagon__tag">{{ block.visual.tagline }}</p>{% endif %}
+      </div>
+      {% elif block.visual.kind == "capabilities" %}
+      <div class="wd-feature__panel reveal">
+        {% if block.visual.heading %}<h3>{{ block.visual.heading }}</h3>{% endif %}
+        {% for col in block.visual.columns %}
+        <div class="wd-feature__panel-col">
+          <h4>{{ col.heading }}</h4>
+          <ul>{% for item in col.items %}<li>{{ item }}</li>{% endfor %}</ul>
+        </div>
+        {% endfor %}
+      </div>
+      {% elif block.visual.kind == "puzzle" %}
+      <div class="wd-puzzle reveal">
+        {% for piece in block.visual.pieces %}
+        <div class="wd-puzzle__piece">
+          <span class="wd-puzzle__index">0{{ loop.index }}</span>
+          <p>{{ piece }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% elif block.visual.kind == "ribbon" %}
+      <div class="wd-ribbon reveal">
+        {% for label in block.visual.items %}
+        <div class="wd-ribbon__item">{{ label }}</div>
+        {% endfor %}
+      </div>
+      {% elif block.visual.kind == "photo" %}
+      <div class="wd-feature__photo reveal" data-placeholder="{{ block.visual.caption | default('Image to come') }}"></div>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,390 @@
+{
+  "regions": [
+    {
+      "id": "wa",
+      "label": "Western Australia",
+      "x": 22.5,
+      "y": 42.5,
+      "projects": [
+        {
+          "name": "Perth Airport Development and Highest and Best Use Land Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Southern Cross Care (WA) Aged Care Facilities Land Market Assessment",
+          "areas": [
+            "Precincts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sa",
+      "label": "South Australia",
+      "x": 35.6,
+      "y": 52.4,
+      "projects": [
+        {
+          "name": "Department of Environment and Water (SA), Port Adelaide: Submission to Infrastructure Australia",
+          "areas": [
+            "Resilience"
+          ]
+        },
+        {
+          "name": "Safecom and Resilient South, Enabling Resilient Asset Delivery (ERAD)",
+          "areas": [
+            "Resilience"
+          ]
+        },
+        {
+          "name": "Resilient South, Resilient Asset Management Pilot Project",
+          "areas": [
+            "Resilience"
+          ]
+        },
+        {
+          "name": "Safecom, Disaster Ready Fund Criteria Analysis",
+          "areas": [
+            "Resilience"
+          ]
+        },
+        {
+          "name": "Enabling Resilience Investment, Capability Demonstration Projects: Port Adelaide Enfield",
+          "areas": [
+            "Resilience"
+          ]
+        },
+        {
+          "name": "Gawler River Flood Management Mitigation Project: Options Analysis and Business Case",
+          "areas": [
+            "Resilience",
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Port Adelaide, Precinct Planning Incorporating Resilient Infrastructure",
+          "areas": [
+            "Precincts"
+          ]
+        },
+        {
+          "name": "Adelaide Showground Master Plan Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vic",
+      "label": "Victoria",
+      "x": 44.3,
+      "y": 71.2,
+      "projects": [
+        {
+          "name": "Maribyrnong City Council, Employment Study and Lands Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Wyndham City Council, Transport and Land Use Precinct Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Sovereign Hill Master Plan Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Peri Urban Councils Victoria, Future Fund for Infrastructure and Amenity",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "12 Apostles Visitor Centre Precinct Analysis",
+          "areas": [
+            "Precincts"
+          ]
+        },
+        {
+          "name": "City of Melbourne, Queen Victoria Market Value Creation Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "La Trobe University, Development and Benefits Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Property Council of Australia, Unveiling Opportunities for Investors: Hidden in Plain Sight",
+          "areas": [
+            "Precincts"
+          ]
+        },
+        {
+          "name": "Fishermans Bend Taskforce, City Edge South Employment Role and Narrative",
+          "areas": [
+            "Precincts"
+          ]
+        },
+        {
+          "name": "City of Melbourne, Greenline Economic Impact and Precinct Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Deakin University Precinct Planning, Infrastructure, Funding and SRL Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Chadstone Precinct Impact Assessment and Precinct Planning",
+          "areas": [
+            "Precincts"
+          ]
+        },
+        {
+          "name": "Chadstone Infrastructure Business Case",
+          "areas": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "TRT and South East Corridor Infrastructure, Funding and Traffic Assessment",
+          "areas": [
+            "Precincts"
+          ]
+        },
+        {
+          "name": "New TRT, Infrastructure in South East Melbourne",
+          "areas": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Victorian Health Building Authority, Caulfield Hospital Redevelopment Program and Land Value Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Victorian Health Building Authority, Barwon Womens and Children Hospital Value Assessment",
+          "areas": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Development Victoria, Commercial Assessment for Shipwreck Coast Master Plan",
+          "areas": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Victorian Health Building Authority, Community Hospital Value Analysis",
+          "areas": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Wadawurrung Traditional Owners Aboriginal Corporation, Economic Assessment",
+          "areas": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "City of Banyule, NEL Tunnel Extension Benefits Assessment",
+          "areas": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "City of Port Phillip, Economic and Employment Narrative for City Edge South Precincts",
+          "areas": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Port of Portland, Pricing Analysis",
+          "areas": [
+            "Infrastructure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nsw",
+      "label": "New South Wales",
+      "x": 44.6,
+      "y": 58.8,
+      "projects": [
+        {
+          "name": "National Recovery and Resilience Authority, Disaster Recovery for Northern Rivers: Economic Impact",
+          "areas": [
+            "Resilience"
+          ]
+        },
+        {
+          "name": "IAG, Resilience Investment Vehicle: City of Parramatta CBD Flood Mitigation Projects",
+          "areas": [
+            "Resilience"
+          ]
+        },
+        {
+          "name": "Regional Adaptive Pathways Planning Project for Illawarra Shoalhaven",
+          "areas": [
+            "Resilience",
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Australian Climate Services, Cobargo: Energy Transition for Resilience",
+          "areas": [
+            "Resilience"
+          ]
+        },
+        {
+          "name": "Embedding the Enabling Resilience Investment Approach in Bega Valley: Supporting Regional Scaling",
+          "areas": [
+            "Resilience",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "IAG, Resilience Investment Vehicle: Western Sydney Aerotropolis Authority Flood Mitigation Projects",
+          "areas": [
+            "Resilience"
+          ]
+        },
+        {
+          "name": "Cockatoo Island Master Plan Commercial Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "North Head Commercial Plan",
+          "areas": [
+            "Precincts"
+          ]
+        },
+        {
+          "name": "Camellia and Sydney West Metro Corridor Transport, Infrastructure, Funding Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Bankstown Central Master Plan Assessment",
+          "areas": [
+            "Precincts"
+          ]
+        },
+        {
+          "name": "Liverpool City Council FAST Corridor Development and Benefits Assessment",
+          "areas": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "UDIA (NSW), Employment Lands Study of Greater Sydney",
+          "areas": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Department of Infrastructure and Regional Development, Western Sydney Airport Transport Value Assessment",
+          "areas": [
+            "Infrastructure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nz",
+      "label": "New Zealand",
+      "x": 73.1,
+      "y": 77.3,
+      "projects": [
+        {
+          "name": "Onehunga: Strategic Value Options Analysis of East-West Connection Interface Road",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Waterfront Auckland Development, Market Based Assessment of Priority Development Areas",
+          "areas": [
+            "Precincts"
+          ]
+        },
+        {
+          "name": "Let's Get Wellington Moving, Opportunities Assessment",
+          "areas": [
+            "Precincts",
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Auckland International Airport, Value Capture for Light Rail Interface with Auckland Airport",
+          "areas": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "name": "Ministry of Transport (NZ), Value Capture Opportunities for City Rail Link",
+          "areas": [
+            "Infrastructure"
+          ]
+        }
+      ]
+    }
+  ],
+  "nationalProjects": [
+    {
+      "name": "NEMA, Telecommunications Resilient Investment Pilot (TRIP)",
+      "areas": [
+        "Resilience"
+      ]
+    },
+    {
+      "name": "National Resilience Taskforce, Developing Resilience Investment: Guidance on Prioritisation",
+      "areas": [
+        "Resilience"
+      ]
+    },
+    {
+      "name": "DCCEEW (with CSIRO), Climate and Disaster Risks, and Energy Transition",
+      "areas": [
+        "Resilience"
+      ]
+    }
+  ]
+}
