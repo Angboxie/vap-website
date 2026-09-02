@@ -81,8 +81,8 @@
 
     fetch(form.action, {
       method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' }
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
     })
       .then(function (response) {
         if (!response.ok) throw new Error('Request failed');

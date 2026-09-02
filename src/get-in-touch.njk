@@ -16,13 +16,26 @@ title: Get in touch
 <section class="contact-main">
   <div class="wrap contact-main__grid reveal">
     <!--
-      This site is statically hosted and has no backend to process form
-      submissions. The action attribute below points at site.formEndpoint
-      in src/_data/site.json, currently a placeholder. Replace it with a
-      real Formspree endpoint (https://formspree.io/f/<form-id>), or any
-      other form-handling service, before this form goes live.
+      Submissions are handled by Netlify Forms (no backend of our own
+      needed) - Netlify detects this form at build time from the
+      data-netlify attribute and name below, and can email new
+      submissions to any address once the site is deployed there and
+      notifications are turned on in Site settings > Forms.
     -->
-    <form class="contact-form" data-contact-form action="{{ site.formEndpoint }}" method="POST" novalidate>
+    <form
+      class="contact-form"
+      data-contact-form
+      name="contact"
+      method="POST"
+      action="/get-in-touch/"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      novalidate>
+      <input type="hidden" name="form-name" value="contact">
+      <p class="visually-hidden">
+        <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+      </p>
+
       <div class="form-status" data-form-status role="alert" hidden></div>
 
       <div class="form-row">

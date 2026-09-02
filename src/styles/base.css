@@ -1247,16 +1247,15 @@ main {
 .work__grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
-  grid-template-rows: repeat(2, minmax(240px, auto));
+  grid-template-rows: auto auto;
+  align-items: start;
   gap: var(--gutter);
-  min-height: 600px;
   margin-top: var(--step-2);
 }
 
 .work__item {
   display: flex;
   flex-direction: column;
-  height: 100%;
   color: inherit;
   text-decoration: none;
 }
@@ -1280,14 +1279,17 @@ main {
   position: relative;
   overflow: hidden;
   border-radius: 0.6rem;
-  flex: 1 1 auto;
-  min-height: 160px;
+  aspect-ratio: 4 / 5;
   background-color: var(--ink);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin-bottom: var(--step-1);
   box-shadow: 0 1px 2px rgba(50, 50, 50, 0.08);
+}
+
+.work__item:not(.work__item--featured) .work__media {
+  aspect-ratio: 4 / 3;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -1362,6 +1364,28 @@ main {
 .work__item:hover .work__link,
 .work__item:focus-visible .work__link {
   color: var(--brand-700);
+}
+
+.work .section-cta {
+  display: flex;
+  width: fit-content;
+  margin: var(--step-3) auto 0;
+  padding: 0.7em 1.4em;
+  border: 1px solid var(--brand-500);
+  border-radius: 999px;
+  color: var(--brand-700);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .work .section-cta {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+.work .section-cta:hover,
+.work .section-cta:focus-visible {
+  background: var(--brand-500);
+  color: var(--surface);
 }
 
 @media (max-width: 799px) {
