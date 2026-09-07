@@ -15,7 +15,7 @@ sections:
     body: Preliminary benefits assessment for potential transport locations, infrastructure and amenity. Provides an order of magnitude estimate of the potential value created or diminished for each station. Comparison tables summarising benefits by location including net value created, employment and new development GFA.
   - heading: "Phase 2: Strategic assessment"
     body: Strategic value assessment of the proposed precinct locations, amenity and transport integration. Impact on dwellings, jobs, development and economic value-add loss or gain for options at an integrated precinct at Deakin and Burwood, or a non-integrated precinct. Preparing a clear narrative which can be utilised in discussions with stakeholders through clear summary pages.
-    image: /assets/img/burwood-path.jpg
+    image: /assets/img/deakin-2.jpg
   - heading: "Phase 3: Implementation"
     body: Updated value assessment for planned precinct infrastructure, amenity and precinct integration. Updated impact on dwellings, jobs, development, economic value-added loss or gain because of full transport integration and/or implementation of "20-minute neighbourhood" principles. A precinct impact analysis and decision support tool with revised outputs for different analysis periods, development and growth rates, and delivery year for the SRL Station.
 ---
