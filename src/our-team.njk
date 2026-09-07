@@ -17,7 +17,8 @@ title: Our team
 </section>
 
 <section class="team">
-  <div class="wrap team__grid">
+  <div class="team__bleed">
+  <div class="team__grid">
     {% for member in team %}
     <a class="team-member team-member--{{ loop.index }} reveal" href="{{ member.url }}">
       <div class="team-member__portrait{% if not member.image %} team-member__portrait--placeholder{% endif %}"{% if member.image %} style="background-image: url('{{ member.image }}');"{% else %} data-placeholder="Portrait to come"{% endif %}></div>
@@ -28,6 +29,7 @@ title: Our team
       </div>
     </a>
     {% endfor %}
+  </div>
   </div>
 </section>
 

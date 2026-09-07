@@ -2357,11 +2357,17 @@ img.logos__mark {
   padding-block: var(--step-2) var(--step-3);
 }
 
+.team__bleed {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  padding-inline: var(--step-1);
+}
+
 .team__grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: var(--step-2) var(--step-1);
+  gap: var(--step-2) var(--step-2);
 }
 
 .team-member {
