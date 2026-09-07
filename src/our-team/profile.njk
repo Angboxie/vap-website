@@ -27,7 +27,7 @@ layout: base.njk
       <h1 class="profile__name">{{ member.name }}</h1>
       {% if member.role %}<p class="profile__role">{{ member.role }}</p>{% endif %}
       {% for para in member.bio %}
-      <p class="profile__bio">{{ para | safe }}</p>
+      <p class="profile__bio{% if loop.last and member.bio.length > 1 %} profile__bio--note{% endif %}">{{ para | safe }}</p>
       {% endfor %}
     </div>
 
@@ -47,7 +47,7 @@ layout: base.njk
       {% if member.qualifications and member.qualifications.length %}
       <div class="profile__contact-block">
         <span class="profile__contact-label">Qualifications</span>
-        <ul class="profile__contact-list">
+        <ul class="profile__contact-list profile__contact-list--check">
           {% for q in member.qualifications %}<li>{{ q }}</li>{% endfor %}
         </ul>
       </div>
@@ -55,7 +55,7 @@ layout: base.njk
       {% if member.expertise and member.expertise.length %}
       <div class="profile__contact-block">
         <span class="profile__contact-label">Expertise</span>
-        <ul class="profile__contact-list">
+        <ul class="profile__contact-list profile__contact-list--tags">
           {% for e in member.expertise %}<li>{{ e }}</li>{% endfor %}
         </ul>
       </div>

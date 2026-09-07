@@ -2530,11 +2530,12 @@ img.logos__mark {
 
 .profile__name {
   margin-top: var(--step-0);
-  font-size: var(--step-3);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.1;
 }
 
 .profile__role {
-  margin-top: 0.3em;
+  margin-top: 0.4em;
   color: var(--brand-700);
   font-weight: 600;
   font-size: 0.9rem;
@@ -2546,11 +2547,21 @@ img.logos__mark {
   margin-top: var(--step-1);
   color: var(--ink-muted);
   font-size: var(--step-1);
+  line-height: 1.65;
   max-width: 52ch;
 }
 
 .profile__bio a {
   color: var(--brand-700);
+}
+
+.profile__bio--note {
+  margin-top: var(--step-2);
+  padding: var(--step-1);
+  border-left: 3px solid var(--brand-500);
+  background: var(--brand-50);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 0.95rem;
 }
 
 .profile__contact {
@@ -2594,6 +2605,37 @@ img.logos__mark {
   display: flex;
   flex-direction: column;
   gap: 0.4em;
+}
+
+.profile__contact-list--check li {
+  position: relative;
+  padding-left: 1.25em;
+}
+
+.profile__contact-list--check li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--brand-500);
+}
+
+.profile__contact-list--tags {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.profile__contact-list--tags li {
+  padding: 0.35em 0.75em;
+  background: var(--brand-50);
+  color: var(--brand-700);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
 .profile__queue {
