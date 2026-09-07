@@ -51,7 +51,7 @@
         {% endfor %}
       </div>
       {% elif block.visual.kind == "photo" %}
-      <div class="wd-feature__photo reveal" data-placeholder="{{ block.visual.caption | default('Image to come') }}"></div>
+      <div class="wd-feature__photo reveal"{% if block.visual.image %} style="background-image: url('{{ block.visual.image }}');"{% else %} data-placeholder="{{ block.visual.caption | default('Image to come') }}"{% endif %}></div>
       {% endif %}
     </div>
     {% endif %}

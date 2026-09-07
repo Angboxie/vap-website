@@ -7,6 +7,7 @@ projectType: Resilient Infrastructure; Disaster Risk Reduction
 lifecycle: Feasibility Analysis, Options Assessment, Adaptation Pathways
 scope: Resilience Adaptation, Land Use and Infrastructure, Feasibility Analysis, Adaptation Pathways
 image: /assets/img/bridge-bega.jpg
+imagePosition: center 78%
 summary: A resilience investment case for Bega Valley Shire Council's road network, using the ERI framework to prioritise climate-adaptive infrastructure investment and secure federal funding.
 order: 4
 sections:
