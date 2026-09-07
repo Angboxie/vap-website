@@ -9,6 +9,10 @@ title: Our team
       <p class="eyebrow">Our team</p>
       <h1>The people behind the work</h1>
     </div>
+    <div class="team-intro__meet reveal">
+      <p class="team-intro__label">Meet our team</p>
+      <p class="team-intro__text">Value Advisory Partners has a team of exceptional and results-driven leaders who love to work with our growing clientele. Our team is eager to learn, open to new ideas and technologies and adaptable to the fast-changing and increasingly complex business environment. Read below to learn more about our exceptional team.</p>
+    </div>
   </div>
 </section>
 
@@ -16,11 +20,13 @@ title: Our team
   <div class="wrap team__grid">
     {% for member in team %}
     <a class="team-member team-member--{{ loop.index }} reveal" href="{{ member.url }}">
-      <div class="team-member__portrait{% if not member.image %} team-member__portrait--placeholder{% endif %}"{% if member.image %} style="background-image: url('{{ member.image }}');"{% else %} data-placeholder="Portrait to come"{% endif %}></div>
-      <div class="team-member__info">
-        <h2 class="team-member__name">{{ member.name }}</h2>
-        {% if member.role %}<p class="team-member__role">{{ member.role }}</p>{% endif %}
-        <span class="team-member__link">View profile <span aria-hidden="true">→</span></span>
+      <div class="team-member__portrait{% if not member.image %} team-member__portrait--placeholder{% endif %}">
+        {% if member.image %}<span class="team-member__photo" style="background-image: url('{{ member.image }}');"></span>{% else %}<span class="team-member__photo" data-placeholder="Portrait to come"></span>{% endif %}
+        <div class="team-member__caption">
+          <h2 class="team-member__name">{{ member.name }}</h2>
+          {% if member.role %}<p class="team-member__role">{{ member.role }}</p>{% endif %}
+          <span class="team-member__link">View profile <span aria-hidden="true">→</span></span>
+        </div>
       </div>
     </a>
     {% endfor %}

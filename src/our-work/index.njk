@@ -14,13 +14,15 @@ title: Our work
     <div class="work-rows" data-work-rows>
       {% for study in collections.caseStudies %}
       <a class="work-row reveal" href="{{ study.url }}" data-work-row data-image="{{ study.data.image }}">
+        <span class="work-row__index" aria-hidden="true">0{{ loop.index }}</span>
+        <span class="work-row__thumb"{% if study.data.image %} style="background-image: url('{{ study.data.image }}');"{% else %} data-placeholder="Image to come"{% endif %} aria-hidden="true"></span>
         <span class="work-row__title">{{ study.data.title }}</span>
         <span class="work-row__meta">
           {% if study.data.client %}<span class="work-row__meta-item">{{ study.data.client }}</span>{% endif %}
           {% if study.data.placeContext %}<span class="work-row__meta-item">{{ study.data.placeContext }}</span>{% endif %}
           {% if study.data.projectType %}<span class="work-row__meta-item">{{ study.data.projectType }}</span>{% endif %}
         </span>
-        <span class="work-row__thumb"{% if study.data.image %} style="background-image: url('{{ study.data.image }}');"{% else %} data-placeholder="Image to come"{% endif %} aria-hidden="true"></span>
+        <span class="work-row__arrow" aria-hidden="true">→</span>
       </a>
       {% endfor %}
     </div>
