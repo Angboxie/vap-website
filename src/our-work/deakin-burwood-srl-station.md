@@ -5,7 +5,7 @@ placeContext: Burwood, Melbourne, Victoria
 projectType: Precinct Development, Transport Infrastructure, Amenity
 lifecycle: Options Analysis and Cost/Benefit Assessment
 scope: Transport Assessment, Land Use, Jobs/GVA/Development Uplift, Dwellings, Value Creation
-image: /assets/img/deakin1.jpg
+image: /assets/img/deakin-2.jpg
 summary: Evaluation of station location options using the VITAL system, comparing integrated and non-integrated precinct approaches under different scenarios.
 order: 3
 sections:
