@@ -6,7 +6,7 @@ placeContext: Adelaide's Northern Growth Areas & Regional South Australia
 projectType: Resilient Infrastructure; Natural Hazard Mitigation
 lifecycle: Options Analysis and Cost/Benefit Assessment
 scope: Cost Benefit Assessment, Land Use, Jobs/GVA, GFA/Development Uplift, Value at Risk (Losses), Value Creation
-image: /assets/img/gawler.JPG
+image: /assets/img/gawler1.jpg
 summary: Economic assessment of flood mitigation options along the Gawler River, integrating flood modelling with impact analysis for dwellings, businesses and farms under a climate change scenario.
 order: 1
 sections:

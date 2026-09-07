@@ -5,7 +5,7 @@ placeContext: Burwood, Melbourne, Victoria
 projectType: Precinct Development, Transport Infrastructure, Amenity
 lifecycle: Options Analysis and Cost/Benefit Assessment
 scope: Transport Assessment, Land Use, Jobs/GVA/Development Uplift, Dwellings, Value Creation
-image: /assets/img/deakin.JPG
+image: /assets/img/deakin1.jpg
 summary: Evaluation of station location options using the VITAL system, comparing integrated and non-integrated precinct approaches under different scenarios.
 order: 3
 sections:
@@ -19,6 +19,6 @@ sections:
   - heading: "Phase 3: Implementation"
     body: Updated value assessment for planned precinct infrastructure, amenity and precinct integration. Updated impact on dwellings, jobs, development, economic value-added loss or gain because of full transport integration and/or implementation of "20-minute neighbourhood" principles. A precinct impact analysis and decision support tool with revised outputs for different analysis periods, development and growth rates, and delivery year for the SRL Station.
 ---
-{% set caseImageSrc = "/assets/img/deakin-building.jpg" %}
+{% set caseImageSrc = "/assets/img/deakin1.jpg" %}
 {% set caseImageCaption = "Burwood station precinct" %}
 {% include "partials/case-image-full.njk" %}

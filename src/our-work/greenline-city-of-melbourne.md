@@ -6,7 +6,7 @@ placeContext: Central Melbourne
 projectType: Urban Renewal, Public Infrastructure and Amenities, Precinct Planning
 lifecycle: Cost/Benefit Assessment, Funding and Financing
 scope: Cost Benefit Assessment, Social Benefits, Land Use, Jobs/GVA, GFA/Development Uplift, Value Creation, Financing Infrastructure Projects
-image: /assets/img/greenline.JPG
+image: /assets/img/greenline-1.jpg
 summary: Economic impact assessment and funding plan for the Greenline Implementation Plan, assessing benefits and constraints for local businesses, residents and visitors along the Yarra River corridor.
 order: 2
 sections:
