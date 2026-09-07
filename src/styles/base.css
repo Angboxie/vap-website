@@ -2512,7 +2512,7 @@ img.logos__mark {
   display: grid;
   grid-template-columns: minmax(320px, 400px) 1fr;
   gap: var(--gutter);
-  align-items: start;
+  align-items: stretch;
 }
 
 .profile__side {
@@ -2531,7 +2531,13 @@ img.logos__mark {
 }
 
 .profile__main {
-  padding-top: 0;
+  padding: var(--step-1);
+  border: 1px solid var(--rule);
+  border-radius: 1rem;
+}
+
+.profile__contact {
+  flex: 1;
 }
 
 .profile__name {
