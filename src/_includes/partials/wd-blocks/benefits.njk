@@ -1,3 +1,4 @@
+{% from "partials/icons.njk" import render as icon %}
 <section class="wd-benefits">
   <div class="wrap">
     <div class="section-head reveal">
@@ -7,7 +8,11 @@
     <ul class="wd-benefits__list stagger">
       {% for item in block.items %}
       <li class="wd-benefits__item reveal">
+        {% if item.icon %}
+        <span class="wd-benefits__icon">{{ icon(item.icon) }}</span>
+        {% else %}
         <span class="wd-benefits__figure">{{ item.figure }}</span>
+        {% endif %}
         <p class="wd-benefits__text">{{ item.text }}</p>
       </li>
       {% endfor %}

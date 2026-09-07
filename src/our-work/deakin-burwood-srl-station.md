@@ -13,11 +13,16 @@ sections:
     body: This case study provides one example of how the VITAL system can be used, step by step in three phases. First, it evaluated the benefits, opportunities and net value of different precinct location options. Then, it compared the impacts of non-integrated and integrated precinct approaches under the proposed station under different scenarios. Finally, further value creation and precinct development outcomes were assessed to align with published visions and policies.
   - heading: "Phase 1: Initial precinct assessment"
     body: Preliminary benefits assessment for potential transport locations, infrastructure and amenity. Provides an order of magnitude estimate of the potential value created or diminished for each station. Comparison tables summarising benefits by location including net value created, employment and new development GFA.
+    image: /assets/img/deakinburwood1.png
+    imageFit: contain
   - heading: "Phase 2: Strategic assessment"
     body: Strategic value assessment of the proposed precinct locations, amenity and transport integration. Impact on dwellings, jobs, development and economic value-add loss or gain for options at an integrated precinct at Deakin and Burwood, or a non-integrated precinct. Preparing a clear narrative which can be utilised in discussions with stakeholders through clear summary pages.
-    image: /assets/img/deakin-2.jpg
+    image: /assets/img/deakinburwood2.png
+    imageFit: contain
   - heading: "Phase 3: Implementation"
     body: Updated value assessment for planned precinct infrastructure, amenity and precinct integration. Updated impact on dwellings, jobs, development, economic value-added loss or gain because of full transport integration and/or implementation of "20-minute neighbourhood" principles. A precinct impact analysis and decision support tool with revised outputs for different analysis periods, development and growth rates, and delivery year for the SRL Station.
+    image: /assets/img/deakinburwood3.png
+    imageFit: contain
 ---
 {% set caseImageSrc = "/assets/img/deakin-2.jpg" %}
 {% set caseImageCaption = "Burwood station precinct" %}
