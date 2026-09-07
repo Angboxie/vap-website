@@ -3541,29 +3541,50 @@ img.logos__mark {
   transform: translateX(0);
 }
 
-/* Desktop / mouse: a single floating panel follows the cursor and swaps
-   image per row, so nothing shifts the row layout itself. */
+/* Desktop / mouse: a single floating card follows the cursor and swaps
+   content per row, so nothing shifts the row layout itself. It carries
+   the case study's summary (not just a bigger copy of the row's own
+   thumbnail) so hovering surfaces new information. */
 .work-list__preview {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 60;
-  width: 22rem;
-  aspect-ratio: 4 / 3;
+  width: 19rem;
   border-radius: 0.75rem;
   overflow: hidden;
+  background: var(--surface);
   opacity: 0;
   pointer-events: none;
   box-shadow: 0 24px 48px rgba(50, 50, 50, 0.22);
 }
 
 .work-list__preview-image {
-  position: absolute;
-  inset: 0;
+  aspect-ratio: 16 / 10;
   background-color: var(--ink);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.work-list__preview-body {
+  padding: var(--step-0);
+}
+
+.work-list__preview-summary {
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.work-list__preview-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.75em;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--brand-700);
 }
 
 @media (prefers-reduced-motion: no-preference) {

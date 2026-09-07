@@ -13,7 +13,7 @@ title: Our work
 
     <div class="work-rows" data-work-rows>
       {% for study in collections.caseStudies %}
-      <a class="work-row reveal" href="{{ study.url }}" data-work-row data-image="{{ study.data.image }}">
+      <a class="work-row reveal" href="{{ study.url }}" data-work-row data-image="{{ study.data.image }}" data-summary="{{ study.data.summary }}">
         <span class="work-row__index" aria-hidden="true">0{{ loop.index }}</span>
         <span class="work-row__thumb"{% if study.data.image %} style="background-image: url('{{ study.data.image }}');"{% else %} data-placeholder="Image to come"{% endif %} aria-hidden="true"></span>
         <span class="work-row__title">{{ study.data.title }}</span>
@@ -30,5 +30,9 @@ title: Our work
 
   <div class="work-list__preview" data-work-preview aria-hidden="true">
     <div class="work-list__preview-image" data-work-preview-image></div>
+    <div class="work-list__preview-body">
+      <p class="work-list__preview-summary" data-work-preview-summary></p>
+      <span class="work-list__preview-cta">View case study <span aria-hidden="true">→</span></span>
+    </div>
   </div>
 </section>
