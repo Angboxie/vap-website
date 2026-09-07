@@ -1932,7 +1932,6 @@ img.logos__mark {
   max-width: 32rem;
   margin-inline: auto;
   background-size: contain;
-  background-color: var(--brand-50);
 }
 
 .wd-stats__list {
