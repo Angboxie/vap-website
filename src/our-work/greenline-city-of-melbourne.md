@@ -14,10 +14,12 @@ sections:
     body: Economic Impact Assessment on the Greenline Implementation Plan to assess economic opportunities, benefits as well as potential constraints that the Greenline once delivered will have on local businesses, the resident community and visitors.
   - heading: Our approach
     body: The Partnership and Funding Plan outlines the detailed funding contributions for the delivery of the Greenline Implementation Plan and associated opportunities that would maximise the value, benefits and the strategic outcomes from its investment in the project and for the Yarra River corridor more broadly.
-    imageCaption: Greenline precinct detail
+    image: /assets/img/greenline-2.jpg
   - heading: The outcome
     body: This assessment needs to provide evidence for both the short and long-term planning for the Greenline precincts, with the results to be used to engage with State Government and key stakeholders to establish grounds for funding contributions and delivery partnerships.
+    image: /assets/img/greenline-3.png
 ---
+{% set caseImageSrc = "/assets/img/greenline-1.jpg" %}
 {% set caseImageCaption = "Yarra River corridor, Melbourne" %}
 {% include "partials/case-image-full.njk" %}
 

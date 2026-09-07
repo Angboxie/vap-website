@@ -79,7 +79,9 @@ layout: base.njk
         <div class="case-panels__panel{% if loop.first %} is-active{% endif %}" data-case-panel="{{ loop.index0 }}"{% if not loop.first %} hidden{% endif %}>
           <h3>{{ section.heading }}</h3>
           <p class="case-panels__body">{{ section.body }}</p>
-          {% if section.imageCaption %}
+          {% if section.image %}
+          <div class="case-inline-image case-inline-image--inset" style="background-image: url('{{ section.image }}');"></div>
+          {% elif section.imageCaption %}
           <div class="case-inline-image case-inline-image--inset" data-placeholder="Image: {{ section.imageCaption }}"></div>
           {% endif %}
         </div>

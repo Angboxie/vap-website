@@ -79,13 +79,16 @@
     }
     if (status) status.hidden = true;
 
+    var payload = Object.fromEntries(new FormData(form));
+
     fetch(form.action, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString()
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(payload)
     })
-      .then(function (response) {
-        if (!response.ok) throw new Error('Request failed');
+      .then(function (response) { return response.json().then(function (json) { return { ok: response.ok, json: json }; }); })
+      .then(function (result) {
+        if (!result.ok || !result.json.success) throw new Error(result.json.message || 'Request failed');
         form.hidden = true;
         setStatus('success', 'Thanks, your message has been sent. We’ll be in touch soon.');
       })

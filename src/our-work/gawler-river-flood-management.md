@@ -12,9 +12,11 @@ order: 1
 sections:
   - heading: Our approach
     body: It required the integration of flood modelling data with impact analysis for dwellings, businesses and farms across the region for the assessment period, under a climate change scenario.
-    imageCaption: Flood modelling detail
+    image: /assets/img/gawler2.jpg
   - heading: The outcome
     body: The assessment demonstrated how the range of methods, tools, practices and capabilities used for assessing and evaluating flood risk reduction strategies and actions could be evolved and expanded in the face of climate change.
+    image: /assets/img/gawler3.jpg
 ---
+{% set caseImageSrc = "/assets/img/gawler1.jpg" %}
 {% set caseImageCaption = "Gawler River, South Australia" %}
 {% include "partials/case-image-full.njk" %}

@@ -6,7 +6,7 @@ placeContext: Bega Valley Shire, South Coast New South Wales
 projectType: Resilient Infrastructure; Disaster Risk Reduction
 lifecycle: Feasibility Analysis, Options Assessment, Adaptation Pathways
 scope: Resilience Adaptation, Land Use and Infrastructure, Feasibility Analysis, Adaptation Pathways
-image: ""
+image: /assets/img/bridge-bega.jpg
 summary: A resilience investment case for Bega Valley Shire Council's road network, using the ERI framework to prioritise climate-adaptive infrastructure investment and secure federal funding.
 order: 4
 sections:
@@ -14,6 +14,8 @@ sections:
     body: Using the Enabling Resilience Investment (ERI) framework, Bega Valley Shire Council (BVSC) undertook a project to strengthen the resilience of its road network against multiple climate hazards. The work focused on maintaining freight, service, and tourism connectivity across the Shire and beyond, while building Council capability to prioritise investments and make stronger, evidence-based funding cases. Stakeholder workshops with Council staff, State Government, industry, and community representatives were central to identifying interventions, developing resilience investment cases, and exploring opportunities for additional value creation.
   - heading: The outcome
     body: The project delivered new digital and decision-support capabilities, including the Resilience Investment Case Explorer (RICE) tool, resilience investment case studies for key corridors, and a hazards and vulnerability assessment for road assets. The outcomes enabled BVSC to successfully secure federal funding for disaster risk reduction initiatives and provided toolkits, user guides, and data resources to embed the methodology into future infrastructure planning. The project demonstrated how data-driven, participatory approaches can translate climate risk assessments into practical, fundable infrastructure resilience strategies.
+    image: /assets/img/bega-town.jpg
 ---
+{% set caseImageSrc = "/assets/img/bega-aerial.jpg" %}
 {% set caseImageCaption = "Bega Valley, New South Wales" %}
 {% include "partials/case-image-full.njk" %}
