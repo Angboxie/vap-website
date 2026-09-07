@@ -18,7 +18,9 @@
       </div>
       {% endif %}
     </div>
-    {% if block.imageCaption %}
+    {% if block.image %}
+    <div class="wd-framework__media reveal{% if block.imageFit == "contain" %} wd-framework__media--contain{% endif %}" style="background-image: url('{{ block.image }}');"></div>
+    {% elif block.imageCaption %}
     <div class="wd-framework__media reveal" data-placeholder="{{ block.imageCaption }}"></div>
     {% endif %}
   </div>

@@ -1922,6 +1922,17 @@ img.logos__mark {
   aspect-ratio: 21 / 8;
   border-radius: 0.75rem;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wd-framework__media--contain {
+  aspect-ratio: 4 / 3;
+  max-width: 32rem;
+  margin-inline: auto;
+  background-size: contain;
+  background-color: var(--brand-50);
 }
 
 .wd-stats__list {
@@ -2335,12 +2346,13 @@ img.logos__mark {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--step-2) var(--gutter);
+  gap: var(--step-2) var(--step-0);
 }
 
 .team-member {
   display: block;
-  flex: 0 1 340px;
+  flex: 1 1 160px;
+  max-width: 210px;
   color: inherit;
   text-decoration: none;
 }
@@ -2411,9 +2423,10 @@ img.logos__mark {
   gap: 0.75em;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .team-member {
     flex-basis: 100%;
+    max-width: 340px;
   }
 
   .team-member--1,
