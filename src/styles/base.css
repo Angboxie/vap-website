@@ -2358,9 +2358,8 @@ img.logos__mark {
 }
 
 .team__bleed {
-  width: 100vw;
-  margin-inline: calc(50% - 50vw);
-  padding-inline: var(--step-1);
+  width: min(100% - (var(--gutter) * 2), 1500px);
+  margin-inline: auto;
 }
 
 .team__grid {
