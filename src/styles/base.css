@@ -2567,13 +2567,27 @@ img.logos__mark {
   color: var(--brand-700);
 }
 
-.profile__bio--note {
+.profile__fact {
   margin-top: var(--step-2);
   padding: var(--step-1);
   border-left: 3px solid var(--brand-500);
   background: var(--brand-50);
   border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.profile__fact-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--brand-700);
+  margin-bottom: 0.5em;
+}
+
+.profile__fact-text {
   font-size: 0.95rem;
+  color: var(--ink-muted);
 }
 
 .profile__contact {

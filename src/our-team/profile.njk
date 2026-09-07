@@ -60,7 +60,14 @@ layout: base.njk
       <h1 class="profile__name">{{ member.name }}</h1>
       {% if member.role %}<p class="profile__role">{{ member.role }}</p>{% endif %}
       {% for para in member.bio %}
-      <p class="profile__bio{% if loop.last and member.bio.length > 1 %} profile__bio--note{% endif %}">{{ para | safe }}</p>
+        {% if loop.last and member.bio.length > 1 %}
+        <div class="profile__fact">
+          <span class="profile__fact-label">Fun fact</span>
+          <p class="profile__fact-text">{{ para | safe }}</p>
+        </div>
+        {% else %}
+        <p class="profile__bio">{{ para | safe }}</p>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
