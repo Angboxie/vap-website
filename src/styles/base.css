@@ -2510,9 +2510,15 @@ img.logos__mark {
 
 .profile__grid {
   display: grid;
-  grid-template-columns: minmax(220px, 300px) 1fr minmax(260px, 320px);
+  grid-template-columns: minmax(320px, 400px) 1fr;
   gap: var(--gutter);
   align-items: start;
+}
+
+.profile__side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--step-1);
 }
 
 .profile__portrait {
@@ -2546,9 +2552,9 @@ img.logos__mark {
 .profile__bio {
   margin-top: var(--step-1);
   color: var(--ink-muted);
-  font-size: var(--step-1);
+  font-size: 0.95rem;
   line-height: 1.65;
-  max-width: 52ch;
+  max-width: 58ch;
 }
 
 .profile__bio a {
@@ -2690,11 +2696,7 @@ img.logos__mark {
 
 @media (max-width: 1023px) {
   .profile__grid {
-    grid-template-columns: minmax(220px, 300px) 1fr;
-  }
-
-  .profile__contact {
-    grid-column: 1 / -1;
+    grid-template-columns: minmax(280px, 340px) 1fr;
   }
 }
 
@@ -2703,8 +2705,8 @@ img.logos__mark {
     grid-template-columns: 1fr;
   }
 
-  .profile__contact {
-    grid-column: auto;
+  .profile__side {
+    max-width: 24rem;
   }
 
   .profile__main {

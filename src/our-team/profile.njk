@@ -20,7 +20,40 @@ layout: base.njk
   </div>
 
   <div class="wrap profile__grid reveal">
-    <div class="profile__portrait{% if not member.image %} profile__portrait--placeholder{% endif %}"{% if member.image %} style="background-image: url('{{ member.image }}');"{% else %} data-placeholder="Portrait to come"{% endif %}></div>
+    <div class="profile__side">
+      <div class="profile__portrait{% if not member.image %} profile__portrait--placeholder{% endif %}"{% if member.image %} style="background-image: url('{{ member.image }}');"{% else %} data-placeholder="Portrait to come"{% endif %}></div>
+
+      <div class="profile__contact">
+        {% if member.phone %}
+        <div class="profile__contact-block">
+          <span class="profile__contact-label">Phone</span>
+          <a class="profile__contact-value" href="tel:{{ member.phone }}">{{ member.phone }}</a>
+        </div>
+        {% endif %}
+        {% if member.email %}
+        <div class="profile__contact-block">
+          <span class="profile__contact-label">Email</span>
+          <a class="profile__contact-value" href="mailto:{{ member.email }}">{{ member.email }}</a>
+        </div>
+        {% endif %}
+        {% if member.qualifications and member.qualifications.length %}
+        <div class="profile__contact-block">
+          <span class="profile__contact-label">Qualifications</span>
+          <ul class="profile__contact-list profile__contact-list--check">
+            {% for q in member.qualifications %}<li>{{ q }}</li>{% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        {% if member.expertise and member.expertise.length %}
+        <div class="profile__contact-block">
+          <span class="profile__contact-label">Expertise</span>
+          <ul class="profile__contact-list profile__contact-list--tags">
+            {% for e in member.expertise %}<li>{{ e }}</li>{% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
 
     <div class="profile__main">
       <p class="eyebrow">Our team</p>
@@ -29,37 +62,6 @@ layout: base.njk
       {% for para in member.bio %}
       <p class="profile__bio{% if loop.last and member.bio.length > 1 %} profile__bio--note{% endif %}">{{ para | safe }}</p>
       {% endfor %}
-    </div>
-
-    <div class="profile__contact">
-      {% if member.phone %}
-      <div class="profile__contact-block">
-        <span class="profile__contact-label">Phone</span>
-        <a class="profile__contact-value" href="tel:{{ member.phone }}">{{ member.phone }}</a>
-      </div>
-      {% endif %}
-      {% if member.email %}
-      <div class="profile__contact-block">
-        <span class="profile__contact-label">Email</span>
-        <a class="profile__contact-value" href="mailto:{{ member.email }}">{{ member.email }}</a>
-      </div>
-      {% endif %}
-      {% if member.qualifications and member.qualifications.length %}
-      <div class="profile__contact-block">
-        <span class="profile__contact-label">Qualifications</span>
-        <ul class="profile__contact-list profile__contact-list--check">
-          {% for q in member.qualifications %}<li>{{ q }}</li>{% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-      {% if member.expertise and member.expertise.length %}
-      <div class="profile__contact-block">
-        <span class="profile__contact-label">Expertise</span>
-        <ul class="profile__contact-list profile__contact-list--tags">
-          {% for e in member.expertise %}<li>{{ e }}</li>{% endfor %}
-        </ul>
-      </div>
-      {% endif %}
     </div>
   </div>
 
