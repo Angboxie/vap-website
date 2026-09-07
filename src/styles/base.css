@@ -452,9 +452,9 @@ main {
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(ellipse 60% 55% at 28% 38%, rgba(0, 0, 0, 0.4), transparent 70%),
-    linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.45) 45%, rgba(0, 0, 0, 0.18) 100%),
-    linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0) 55%);
+    radial-gradient(ellipse 60% 55% at 28% 38%, rgba(0, 0, 0, 0.28), transparent 70%),
+    linear-gradient(to top, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.32) 45%, rgba(0, 0, 0, 0.1) 100%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0) 55%);
 }
 
 .hero__fade {
